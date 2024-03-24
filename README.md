@@ -8,7 +8,7 @@ title: Azure Landing Zone
 flowchart TD
 subgraph master-bootstrap[Master Administration]
     master-source[fa:fa-github Github]
-    master-principal[User Principal]:::controlled
+    master-principal[User Principal]
     master-terraform[fa:fa-road-bridge Terraform]:::controlled
     master-resource-group[Resource Group]:::controlled
     master-content[Master-Specific\nResources]:::controlled
