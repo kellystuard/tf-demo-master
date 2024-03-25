@@ -6,6 +6,7 @@ resource "azurerm_resource_group" "master" {
   tags = {
     cost_center = local.master.cost_center
     description = "Azure Landing Zone Master"
+    environment = "master"
     owner       = local.master.owner
   }
 }
