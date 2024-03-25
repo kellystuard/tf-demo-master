@@ -2,7 +2,7 @@ terraform {
   required_version = "~>1.5"
   required_providers {
     spacelift = {
-      source = "spacelift-io/spacelift"
+      source  = "spacelift-io/spacelift"
       version = "1.10.0"
     }
     tfe = {

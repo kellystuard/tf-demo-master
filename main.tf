@@ -8,7 +8,7 @@ locals {
     cost_center = "88149"
     owner       = "kellystuard@gmail.com"
   }
-  
+
   zone = {
     cost_center = "88149"
     owner       = "kellystuard@gmail.com"

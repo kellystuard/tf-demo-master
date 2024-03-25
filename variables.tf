@@ -16,6 +16,6 @@ variable "azure_region" {
 variable "resource-prefix" {
   type        = string
   description = "Prefix to use for unique resources, such as workspace and resource group names."
-  
+
   default = "tf-demo-"
 }
