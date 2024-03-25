@@ -1,6 +1,8 @@
 # tf-demo-master
 Master Terraform repository for kicking off the demo. Creates `tf-demo-zones`.
 
+This is the most secure level of resources. Everything created by this master level should have the highest sensitivity to change and every change should be highly reviewed.
+
 ```mermaid
 ---
 title: Azure Landing Zone
@@ -87,5 +89,4 @@ class zone-content orange
 class hub-terraform,hub-principal orange
 class zone-bootstrap,hub-template,spoke-template green
 class hub-bootstrap,spoke-bootstrap,hub,spoke blue
-
 ```
