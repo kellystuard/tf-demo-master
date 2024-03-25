@@ -4,6 +4,6 @@ resource "spacelift_stack" "zone" {
   description       = "Zone Terraform repository for continuing the demo. Creates tf-demo-hub-* and tf-demo-spoke-*."
   name              = "${var.resource_prefix}zone"
   project_root      = "tf-demo"
-  repository        = "core-infra"
+  repository        = "github-kellystuard"
   terraform_version = "1.5.7"
 }
