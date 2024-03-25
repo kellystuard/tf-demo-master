@@ -19,3 +19,8 @@ variable "resource_prefix" {
 
   default = "tf-demo-"
 }
+
+variable "spacelift_stack_id" {
+  type        = string
+  description = "Automatically set by the Spacelift platform"
+}

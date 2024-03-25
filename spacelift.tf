@@ -24,3 +24,14 @@ resource "spacelift_azure_integration_attachment" "zone" {
   integration_id = data.spacelift_azure_integration.default.id
   stack_id       = spacelift_stack.zone.id
 }
+
+resource "spacelift_stack_dependency" "zone2master" {
+  stack_id            = spacelift_stack.zone.id
+  depends_on_stack_id = var.spacelift_stack_id
+}
+
+resource "spacelift_stack_dependency_reference" "zone_resource_group" {
+  stack_dependency_id = spacelift_stack_dependency.zone2master.id
+  output_name         = "zone_resource_group"
+  input_name          = "TF_VAR_zone_resource_group"
+}
