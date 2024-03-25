@@ -13,7 +13,7 @@ variable "azure_region" {
   description = "Region to provision master resources into."
 }
 
-variable "resource-prefix" {
+variable "resource_prefix" {
   type        = string
   description = "Prefix to use for unique resources, such as workspace and resource group names."
 

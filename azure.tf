@@ -1,6 +1,6 @@
 # automatically create the appropriately-named resource group in Azure
 resource "azurerm_resource_group" "master" {
-  name     = "${var.resource-prefix}master"
+  name     = "${var.resource_prefix}master"
   location = var.azure_region
 
   tags = {
