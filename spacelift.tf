@@ -30,8 +30,14 @@ resource "spacelift_stack_dependency" "zone2master" {
   depends_on_stack_id = var.spacelift_stack_id
 }
 
-resource "spacelift_stack_dependency_reference" "zone_resource_group" {
+resource "spacelift_stack_dependency_reference" "zone_resource_group_name" {
   stack_dependency_id = spacelift_stack_dependency.zone2master.id
-  output_name         = "zone_resource_group"
-  input_name          = "TF_VAR_zone_resource_group"
+  output_name         = "zone_resource_group_name"
+  input_name          = "TF_VAR_zone_resource_group_name"
+}
+
+resource "spacelift_stack_dependency_reference" "zone_resource_group_location" {
+  stack_dependency_id = spacelift_stack_dependency.zone2master.id
+  output_name         = "zone_resource_group_location"
+  input_name          = "TF_VAR_zone_resource_group_location"
 }
