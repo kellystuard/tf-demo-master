@@ -6,6 +6,7 @@ resource "spacelift_stack" "zone" {
   branch         = "main"
   description    = "Zone Terraform repository for continuing the demo. Creates tf-demo-hub-* and tf-demo-spoke-*."
   repository     = "${var.resource_prefix}zone"
+  space_id       = "root"
 
   github_enterprise {
     namespace = "kellystuard"
