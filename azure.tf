@@ -14,3 +14,15 @@ resource "azurerm_resource_group" "master" {
 ###
 # Other Master-Specific Azure Resources would be created here
 ###
+
+resource "azurerm_resource_group" "zone" {
+  name     = "${var.resource_prefix}zone"
+  location = var.azure_region
+
+  tags = {
+    cost_center = local.master.cost_center
+    description = "Azure Landing Zone"
+    environment = "zone"
+    owner       = local.master.owner
+  }
+}

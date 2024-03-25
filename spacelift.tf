@@ -1,3 +1,7 @@
+data "spacelift_azure_integration" "default" {
+  name = "Azure (kellystuard)"
+}
+
 resource "spacelift_stack" "zone" {
   name = "${var.resource_prefix}zone"
 
@@ -9,7 +13,14 @@ resource "spacelift_stack" "zone" {
   repository     = "${var.resource_prefix}zone"
   space_id       = "root"
 
+  terraform_smart_sanitization = true
+
   github_enterprise {
     namespace = "kellystuard"
   }
+}
+
+resource "spacelift_azure_integration_attachment" "zone" {
+  integration_id  = spacelift_azure_integration.default.id
+  stack_id        = spacelift_stack.zone.id
 }
