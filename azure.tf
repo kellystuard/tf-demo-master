@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "master" {
   location = var.azure_region
 
   tags = {
-    cost_center = each.value.cost_center
+    cost_center = local.master.cost_center
     description = "Azure Landing Zone Master"
     owner       = local.master.owner
   }
