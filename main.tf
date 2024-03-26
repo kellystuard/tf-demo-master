@@ -10,7 +10,7 @@ locals {
   }
 
   zone = {
-    cost_center = "88149"
+    cost_center = "88150"
     owner       = "kellystuard@gmail.com"
   }
 }
